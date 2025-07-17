@@ -1,0 +1,46 @@
+tasks:
+  - id: interpret_code
+    agent: Code Interpreter
+    description: Explain what the code is intended to do.
+    input: user_input
+    output: code_explanation
+  - id: analyze_error
+    agent: Error Message Analyzer
+    description: Analyze the provided error message.
+    input: user_input
+    output: error_analysis
+  - id: contextualize
+    agent: Contextualizer
+    description: Ask for more context if needed (simulated step).
+    input: [user_input, code_explanation, error_analysis]
+    output: context_questions
+  - id: diagnose_problem
+    agent: Problem Diagnoser
+    description: Identify the root cause of the bug.
+    input: [user_input, code_explanation, error_analysis, context_questions]
+    output: diagnosis
+  - id: propose_solution
+    agent: Solution Proposer
+    description: Suggest 2–3 possible fixes for the issue.
+    input: diagnosis
+    output: solutions
+  - id: refactor_code
+    agent: Refactorer
+    description: Propose code improvements after fixing (optional).
+    input: solutions
+    output: refactored_suggestions
+  - id: generate_example
+    agent: Example Generator
+    description: Produce a corrected code snippet.
+    input: solutions
+    output: corrected_code
+  - id: format_explanation
+    agent: Explanation Formatter
+    description: Format the full explanation for the user.
+    input: [code_explanation, error_analysis, diagnosis, solutions, corrected_code, refactored_suggestions]
+    output: formatted_explanation
+  - id: provide_tip
+    agent: Educational Tip Provider
+    description: Offer a general programming tip based on the issue.
+    input: diagnosis
+    output: educational_tip 

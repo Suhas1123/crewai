@@ -1,0 +1,46 @@
+agents:
+  - name: Code Interpreter
+    role: Understands and explains what the code should do.
+    goal: Provide a clear, concise explanation of the code's intended functionality.
+    tools: []
+    tasks: [interpret_code]
+  - name: Error Message Analyzer
+    role: Interprets the provided error message.
+    goal: Break down the error message and relate it to the code snippet.
+    tools: []
+    tasks: [analyze_error]
+  - name: Contextualizer
+    role: Asks follow-up questions if the code/error lacks context (simulated).
+    goal: Identify missing context and request clarifications as needed.
+    tools: []
+    tasks: [contextualize]
+  - name: Problem Diagnoser
+    role: Identifies the root cause of the bug.
+    goal: Analyze code and error to pinpoint the underlying issue.
+    tools: []
+    tasks: [diagnose_problem]
+  - name: Solution Proposer
+    role: Suggests 2–3 fixes for the issue.
+    goal: Offer actionable solutions to resolve the identified problem.
+    tools: []
+    tasks: [propose_solution]
+  - name: Refactorer
+    role: Proposes code improvements after fixing (optional).
+    goal: Suggest code refactoring or enhancements for better quality.
+    tools: []
+    tasks: [refactor_code]
+  - name: Example Generator
+    role: Produces a corrected code snippet.
+    goal: Output a working, corrected version of the code.
+    tools: []
+    tasks: [generate_example]
+  - name: Explanation Formatter
+    role: Formats the full explanation clearly for users.
+    goal: Organize and present all findings in a user-friendly format.
+    tools: []
+    tasks: [format_explanation]
+  - name: Educational Tip Provider
+    role: Offers general programming tips based on the issue.
+    goal: Share relevant best practices or learning points.
+    tools: []
+    tasks: [provide_tip] 
